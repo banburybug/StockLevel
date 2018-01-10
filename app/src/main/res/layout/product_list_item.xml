@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="productItemBind"
+            type="com.mattsmith.demigodstocklevel.ProductListItem" />
+    </data>
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/product_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/product_item_remove"
+            style="@android:style/Widget.Holo.ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:maxWidth="@dimen/count_max_width"
+            android:minWidth="@dimen/count_min_width"
+            android:requiresFadingEdge="horizontal|vertical"
+            app:srcCompat="@android:drawable/arrow_down_float"
+            tools:style="@style/Widget.AppCompat.ImageButton" />
+
+        <TextView
+            android:id="@+id/product_item_text"
+            android:layout_width="0sp"
+            android:layout_height="150sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@{productItemBind.name}"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/product_item_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:cursorVisible="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxWidth="@dimen/count_max_width"
+            android:minWidth="@dimen/count_min_width"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:text="@{productItemBind.itemCount}"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/product_item_add"
+            style="@android:style/Widget.Holo.ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:maxWidth="@dimen/count_max_width"
+            android:minWidth="@dimen/count_max_width"
+            android:requiresFadingEdge="horizontal|vertical"
+            app:srcCompat="@android:drawable/arrow_up_float"
+            tools:style="@style/Widget.AppCompat.ImageButton" />
+
+    </LinearLayout>
+</layout>

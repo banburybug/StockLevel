@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/tools"
+    xmlns:androclass="http://schemas.android.com/apk/res/android">
+
+    <item
+        androclass:title="Underwater"
+        android:id="@+id/underwater" />
+
+    <item
+        androclass:title="Woodland"
+        android:id="@+id/woodland" />
+
+    <item
+        androclass:title="Bugs"
+        android:id="@+id/bugs" />
+    <item
+        androclass:title="Reptiles"
+        android:id="@+id/reptiles" />
+    <item
+        androclass:title="Floral"
+        android:id="@+id/floral" />
+
+    <item
+        androclass:title="Clear Acrylic"
+        android:id="@+id/clearacrylic" />
+
+    <item
+        androclass:title="All"
+        android:id="@+id/all" />
+
+</menu>
